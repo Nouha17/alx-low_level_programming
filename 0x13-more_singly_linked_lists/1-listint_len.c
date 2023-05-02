@@ -1,21 +1,18 @@
 #include "lists.h"
-
 /**
- * *listint_len - prints the number of all the elements of a listint_t list.
- * *@h: list
- * *Return: number of elements
- * */
-
+ *  * listint_len - check the code
+ *   * @h: a
+ *    * Return: Always 0.
+ *     */
 size_t listint_len(const listint_t *h)
 {
-		const listint_t *placement = h;
+		const listint_t *nav = h;
 			size_t count = 0;
 
-				while (placement != NULL)
+				while (nav)
 						{
 									count++;
-											placement = placement->next;
+											nav = nav->next;
 												}
-
 					return (count);
 }

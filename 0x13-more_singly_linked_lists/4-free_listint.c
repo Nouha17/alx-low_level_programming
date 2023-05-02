@@ -1,18 +1,18 @@
-nclude "lists.h"
+#include "lists.h"
 
 /**
- * *free_listint - frees a list
- * *@head: pointer to first node
- * */
-
+ *  * free_listint - check the code
+ *   * @head: a
+ *    * Return: Always 0.
+ *     */
 void free_listint(listint_t *head)
 {
-		listint_t *placement;
+		listint_t *nav = head, *nav2;
 
-			while (head != NULL)
+			while (nav)
 					{
-								placement = head;
-										head = head->next;
-												free(placement);
+								nav2 = nav->next;
+										free(nav);
+												nav = nav2;
 													}
 }
